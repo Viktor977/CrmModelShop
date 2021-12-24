@@ -58,6 +58,7 @@ namespace CrmUi
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(275, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 43);
@@ -69,6 +70,11 @@ namespace CrmUi
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(166, 70);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(286, 20);
             this.numericUpDown1.TabIndex = 3;
@@ -106,6 +112,7 @@ namespace CrmUi
             // 
             // ProductForm
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 450);

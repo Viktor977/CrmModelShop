@@ -13,7 +13,7 @@ namespace CrmUi
 {
     public partial class SellerForm : Form
     {
-        public Seller seller;
+        public Seller Seller { get; set; }
         public SellerForm()
         {
             InitializeComponent();
@@ -21,11 +21,17 @@ namespace CrmUi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            seller = new Seller()
+            Seller = new Seller()
             {
-                Name = textBox1.Text
+                Name = textBox1.Text,
+                
             };
             Close();
+        }
+
+        private void SellerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

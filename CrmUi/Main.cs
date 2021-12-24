@@ -22,26 +22,26 @@ namespace CrmUi
 
         private void ProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogProduct = new Catalog<Product>(db.Products);
+            var catalogProduct = new Catalog<Product>(db.Products,db);
             catalogProduct.Show();
         }
 
         private void SellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogSeller = new Catalog<Seller>(db.Sellers);
+            var catalogSeller = new Catalog<Seller>(db.Sellers,db);
             catalogSeller.Show();
 
         }
 
         private void CustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogCustomer = new Catalog<Customer>(db.Customers);
+            var catalogCustomer = new Catalog<Customer>(db.Customers,db);
             catalogCustomer.Show();
         }
 
         private void ChekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogCheck = new Catalog<Check>(db.Checks);
+            var catalogCheck = new Catalog<Check>(db.Checks,db);
             catalogCheck.Show();
         }
 
@@ -60,7 +60,7 @@ namespace CrmUi
             var seller = new SellerForm();
             if (seller.ShowDialog() == DialogResult.OK)
             {
-                db.Sellers.Add(seller.seller);
+                db.Sellers.Add(seller.Seller);
                 db.SaveChanges();
             }
         }
@@ -70,7 +70,7 @@ namespace CrmUi
             ProductForm form = new ProductForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                db.Products.Add(form.product);
+                db.Products.Add(form.Product);
                 db.SaveChanges();
             }
         }
