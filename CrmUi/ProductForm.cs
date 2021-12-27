@@ -27,10 +27,10 @@ namespace CrmUi
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            var product = Product ?? new Product();
-            product.Name = textBox1.Text;
-            product.Count = Convert.ToInt32(numericUpDown1.Value);
-            product.Price = numericUpDown2.Value;
+            Product = new Product();
+            Product.Name = textBox1.Text;
+            Product.Count = Convert.ToInt32(numericUpDown1.Value);
+            Product.Price = numericUpDown2.Value;
             Close();
         }
     }

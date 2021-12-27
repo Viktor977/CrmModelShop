@@ -70,6 +70,7 @@ namespace CrmUi
             ProductForm form = new ProductForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
+              
                 db.Products.Add(form.Product);
                 db.SaveChanges();
             }
