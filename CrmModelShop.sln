@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32002.261
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmBl", "CrmBl\CrmBl.csproj", "{7461A760-2067-44F2-B059-326130F0364E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmUi", "CrmUi\CrmUi.csproj", "{8787950A-BB79-4CBF-A8CB-B66D7D63D102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmBlTests", "CrmBlTests\CrmBlTests.csproj", "{1E6DCB2C-08A3-4EAB-8E08-5D13F52DAA60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8787950A-BB79-4CBF-A8CB-B66D7D63D102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8787950A-BB79-4CBF-A8CB-B66D7D63D102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8787950A-BB79-4CBF-A8CB-B66D7D63D102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6DCB2C-08A3-4EAB-8E08-5D13F52DAA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6DCB2C-08A3-4EAB-8E08-5D13F52DAA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6DCB2C-08A3-4EAB-8E08-5D13F52DAA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6DCB2C-08A3-4EAB-8E08-5D13F52DAA60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
