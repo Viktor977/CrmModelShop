@@ -9,10 +9,10 @@ namespace CrmBl.Model
     public class Generator
     {
         Random rnd=new Random();
-            
-        public List<Customer> Customers { get; set; }
-        public List<Product> Products { get; set; }
-        public List<Seller> Sellers { get; set; }
+
+        public List<Customer> Customers { get; set; } = new List<Customer>();
+        public List<Product> Products { get; set; } = new List<Product>();
+        public List<Seller> Sellers { get; set; } = new List<Seller>();
       
         public List<Customer> GetNewCustomers(int count)
         {
@@ -24,9 +24,11 @@ namespace CrmBl.Model
                     Name = GetRandomText(),
                     CustomerId = Customers.Count,
                 };
+
                 Customers.Add(customer);
                 result.Add(customer);
             }
+
             return result;
         }
         public List<Seller> GetNewSellers(int count)
@@ -39,9 +41,11 @@ namespace CrmBl.Model
                     Name = GetRandomText(),
                     SellerId = Sellers.Count,
                 };
+
                 Sellers.Add(seller);
                 result.Add(seller);
             }
+
             return result;
         }
         public List<Product> GetNewProducts(int count)
@@ -56,9 +60,11 @@ namespace CrmBl.Model
                     Count = rnd.Next(10, 1000),
                     Price=Convert.ToDecimal(rnd.Next(5, 100000)+rnd.NextDouble()),
                 };
+
                 Products.Add(product);
                 result.Add(product);
             }
+
             return result;
         }
         public List<Product>GetRandomProduct(int min,int max)
@@ -69,8 +75,8 @@ namespace CrmBl.Model
             {
                 result.Add(Products[rnd.Next(Products.Count-1)]);
             }
-            return result;
 
+            return result;
         }
        
         private static string GetRandomText()

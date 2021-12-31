@@ -59,13 +59,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\CashDesk.cs" />
-    <Compile Include="Model\Check.cs" />
+    <Compile Include="Model\Entities\Check.cs" />
     <Compile Include="Model\CrmContext.cs" />
-    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Entities\Customer.cs" />
     <Compile Include="Model\Generator.cs" />
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="Model\Sell.cs" />
-    <Compile Include="Model\Seller.cs" />
+    <Compile Include="Model\Entities\Product.cs" />
+    <Compile Include="Model\Entities\Sell.cs" />
+    <Compile Include="Model\Entities\Seller.cs" />
     <Compile Include="Model\ShopComputerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
