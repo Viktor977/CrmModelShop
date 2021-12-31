@@ -26,9 +26,10 @@ namespace CrmUi
             {
                 var box = new CashBoxView(model.CashDesks[i], i, 10, 26 * i);
                 cashBoxes.Add(box);
-                Controls.Add(box.label);
-                Controls.Add(box.numericUpDown);
-                Controls.Add(box.ProgressBar);
+                Controls.Add(box.CahdDeskname);
+                Controls.Add(box.Price);
+                Controls.Add(box.QueueLenght);
+                Controls.Add(box.LeaveCustomerCount);
             }
             model.Start(); 
         }
@@ -36,6 +37,22 @@ namespace CrmUi
         private void ModelForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             model.Stop();
+        }
+
+        private void ModelForm_Load(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = model.CustomerSpeed;
+            numericUpDown2.Value = model.CashDeskSpeed;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            model.CustomerSpeed=(int)numericUpDown1.Value;
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            model.CashDeskSpeed=(int)numericUpDown2.Value;
         }
     }
 }

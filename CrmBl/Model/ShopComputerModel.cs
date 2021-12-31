@@ -16,6 +16,8 @@ namespace CrmBl.Model
         public List<Check> Checks { get; set; } = new List<Check>();
         public List<Sell> Sells { get; set; } = new List<Sell>();
         public Queue<Seller> Sellers { get; set; } = new Queue<Seller>();
+        public int CustomerSpeed { get; set; } = 1000;
+        public int CashDeskSpeed { get; set; } = 1000;
         public ShopComputerModel()
         {
             var sellers = generator.GetNewSellers(20);
@@ -34,14 +36,13 @@ namespace CrmBl.Model
         public void Start()
         {
             IsWorckinig = true;
-            Task.Run(() => CreateCarts(10, 1000));
-            var cashDesckTasks = CashDesks.Select(t => new Task(() => CashDeskWork(t, 1000)));
+            Task.Run(() => CreateCarts(10, CustomerSpeed));
+            var cashDesckTasks = CashDesks.Select(t => new Task(() => CashDeskWork(t, CashDeskSpeed)));
 
             foreach (var task in cashDesckTasks)
             {
                 task.Start();
             }
-
         }
 
         public void Stop()
