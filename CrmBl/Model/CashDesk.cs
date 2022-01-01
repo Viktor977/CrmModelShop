@@ -8,7 +8,7 @@ namespace CrmBl.Model
 {
     public class CashDesk
     {
-        CrmContext db = new CrmContext();
+        CrmContext db;
         public int Id { get; set; }
         public int Number { get; set; } 
         public Seller Seller { get; set; }
@@ -19,8 +19,9 @@ namespace CrmBl.Model
 
         public bool IsModel { get; set; }
         public Queue<Cart> Queue { get; set; }
-        public CashDesk(int number, Seller seller)
+        public CashDesk(int number, Seller seller,CrmContext db)
         {
+            this.db = db ?? new CrmContext();
             Id = number;
             Seller = seller;
             Queue = new Queue<Cart>();
@@ -96,7 +97,7 @@ namespace CrmBl.Model
                 {
                     db.SaveChanges();
                 }
-                CheckClosed.Invoke(this,check);
+                CheckClosed?.Invoke(this, check);
             }
 
             return sum;
